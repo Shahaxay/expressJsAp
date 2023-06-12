@@ -6,7 +6,7 @@ app.use('/add-product',(req,res,next)=>{
     //it is used to send response to the client. After sending response, middle ware written behind will not execute
     res.send('<form action="/product" method="post"><label for="product">Product</label></label><input type="text" name="title" id="product"><br>Quantity:<input type="number" name="quantity" id="quant"><button type="submit">Add Product</button></form>');
 })
-app.use('/product',(req,res,next)=>{
+app.post('/product',(req,res,next)=>{
     console.log(req.body);
     res.redirect('/');
 })
