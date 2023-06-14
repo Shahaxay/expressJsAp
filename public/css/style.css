@@ -1,0 +1,23 @@
+.main-header{
+    background-color: rgb(70, 70, 30);
+}
+.main-header__nav{
+}
+.main-header__list-item{
+    height: 3rem;
+    display: flex;
+    justify-content:center;
+    place-items: center;
+}
+.main-header__item{
+    list-style: none;
+    margin: .25rem;
+}
+.main-header__item a{
+    color: white;
+    text-decoration: none;
+}
+.main-header__item a:hover,
+.main-header__item a:active{
+    color:violet;
+}
