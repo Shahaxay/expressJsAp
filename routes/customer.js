@@ -2,16 +2,13 @@ const express=require('express');
 const path=require('path');
 
 const rootDir=require('../util/path');
+const productController=require('../controllers/productController');
 
 const route=express.Router();
 
-route.get('/contactus',(req,res,next)=>{
-    res.sendFile(path.join(rootDir,'views','contactus.html'));
-});
+route.get('/contactus',productController.showContactUsPage);
 
-route.post('/success',(req,res,next)=>{
-    res.sendFile(path.join(rootDir,'views','success.html'));
-});
+route.post('/success',productController.showSuccessPage);
 route.get('/',(req,res,next)=>{
     res.sendFile(path.join(rootDir,'views','shop.html'));
 });
